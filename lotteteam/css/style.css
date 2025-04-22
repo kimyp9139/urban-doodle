@@ -1,0 +1,106 @@
+/* 전체 초기화 */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/bg_slider01.gif'); /* body에 배경적용 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* 헤더 로고 */
+.header-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-logo img.only-top-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: none;
+    object-position: top;
+}
+
+/* 메인 섹션 */
+.section3 {
+    width: 100%;
+    height: calc(100% - 80px); /* header 높이 빼줌 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section3-center {
+    width: 100%;
+    text-align: center;
+}
+
+.section3-log {
+    margin-bottom: 20px;
+}
+
+.section3-log img {
+    width: 200px;
+}
+
+/* 제목, 설명 */
+.text-box h1 {
+    font-size: 60px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 20px;
+    margin: 20px 0 40px 0;
+    line-height: 1.6;
+}
+
+/* 아이콘 영역 */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin: 40px 0 30px 0;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+.icon-box img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-text p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* 버튼 */
+.main-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: white;
+    color: black;
+}
