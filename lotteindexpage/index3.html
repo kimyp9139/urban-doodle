@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Better Life - Section3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .section3 {
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            transition: background-image 0.6s ease-in-out;
+            height: 78vh;
+
+        }
+
+        .slide active {
+       
+        }
+
+        .content {
+            max-width: 1600px;
+            width: 90vw;
+            margin: 0 auto;
+        }
+
+        .pr-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #ffffff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .pr-subtitle {
+            font-size: 16px;
+            color: #afafaf;
+            margin-bottom: 40px;
+        }
+
+        .better-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .better-btn {
+            font-size: 18px;
+            font-weight: bold;
+            width: 200px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+
+        .better-btn.active {
+            background-color: #d60000;
+        }
+
+        .better-btn:not(.active) {
+            background-color: #333;
+        }
+
+        .slider-box {
+            width: 100%;
+            padding: 60px 80px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+            
+        }
+
+        .slide {
+            display: none;
+          
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .slide-text h3 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            color: #111;
+            text-align: center;
+        }
+
+        .slide-text p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #444;
+            text-align: center;
+            max-width: none;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .slider-nav button {
+            background: transparent;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .slider-nav img {
+            width: 36px;
+            height: 36px;
+            filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+            transition: transform 0.2s;
+        }
+
+        .slider-nav button:hover img {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .slider-box {
+                padding: 40px 20px;
+            }
+
+            .slide-text h3 {
+                font-size: 24px;
+            }
+
+            .slide-text p {
+                font-size: 16px;
+            }
+
+            .better-btn {
+                font-size: 16px;
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section3" id="section3">
+        <div class="content">
+            <h2 class="pr-title">ACHIEVEMENTS</h2>
+            <p class="pr-subtitle">지속 가능한 삶을 위한 롯데중앙연구소의 Better Life 연구 성과를 소개합니다.</p>
+
+            <div class="better-buttons">
+                <button class="better-btn active" id="btn-life">Better Life</button>
+                <button class="better-btn" id="btn-food">Better Food</button>
+            </div>
+
+            <div class="slider-box">
+                <div class="slide" data-bg="img/life1.png">
+                    <div class="slide-text">
+                        <h3>푸드 업사이클링 연구 : 다시 태어나는 식품 부산물</h3>
+                        <p>이상 기후에 따른 환경 변화와 지속 가능성에 대한 관심 증대로, 소비자들은 지속적으로 친환경 제품에 대한 가치 소비를 원하고 있으며
+
+                            국내외 ESG 트렌드 또한 변화하고 있습니다. 이에 식품 업계에서도 적극적으로 친환경 소재와 제품을 개발할 필요가 높아졌습니다.
+
+
+
+                            롯데중앙연구소는 원료 가공 및 제품생산 공정에서 발생하는 식품 부산물을 활용해 업사이클링 부가 가치 소재 개발에 집중하고 있습니다.
+
+                            소재 활용 범위를 식품에 한정하지 않고 미용(화장품) 등 다양한 분야의 제품에까지 적용할 수 있도록 연구의 폭을 끊임없이 넓혀가고 있습니다.</p>
+                    </div>
+                </div>
+                <div class="slide" data-bg="img/life2.png">
+                    <div class="slide-text">
+                        <h3>관능의 DT를 통한 맛의 객관화 실현</h3>
+                        <p>전자혀, 전자코 등 감각 분석 기기를 통해 오감을 수치화하고 있습니다. 뇌파 분석까지 확장하여 신제품 개발에 활용합니다.</p>
+                    </div>
+                </div>
+                <div class="slide" data-bg="img/life3.png">
+                    <div class="slide-text">
+                        <h3>식용 곤충 연구, 가까운 미래의 식량 자원</h3>
+                        <p>2050년까지 90억 인구를 고려한 대체 단백질로 식용 곤충을 연구하며 지속 가능성을 모색하고 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <button class="prev"><img src="img/big-arrow-left.png" alt="이전"></button>
+                    <button class="next"><img src="img/big-arrow-right.png" alt="다음"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const section = document.getElementById('section3');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const btnLife = document.getElementById('btn-life');
+            const btnFood = document.getElementById('btn-food');
+            let current = 0;
+
+            const showSlide = index => {
+                slides.forEach(s => s.classList.remove('active'));
+                slides[index].classList.add('active');
+                const bg = slides[index].getAttribute('data-bg');
+                section.style.backgroundImage = `url(${bg})`;
+            };
+
+            prevBtn.addEventListener('click', () => {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            });
+
+            btnLife.addEventListener('click', () => {
+                window.location.href = 'index3.html';
+            });
+
+            btnFood.addEventListener('click', () => {
+                window.location.href = 'index3-2.html';
+            });
+
+            showSlide(current);
+        });
+    </script>
+</body>
+
+</html>

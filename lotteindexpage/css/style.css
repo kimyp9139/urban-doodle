@@ -1,0 +1,359 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.text {
+    font-size: 36px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+    /* ✅ 이 값으로 하단 조정 */
+    margin-left: 6px;
+}
+
+.sub-visual__title {
+
+    padding: 30px 40px;
+    border-radius: 12px;
+    color: #fff;
+    margin-top: 110px;
+    /* ← 이 값으로 전체를 아래로 내릴 수 있어요 */
+    margin-left: -50px;
+}
+
+/* 상단 비주얼 영역 */
+.sub-visual {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-image: url('../img/visual_1.jpg');
+    /* 이미지 위치 주의! */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* 비주얼 내부 내용 정렬 */
+.sub-visual__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* 경로 네비게이션 */
+.sub-visual__nav {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+
+.sub-visual__nav .list {
+    display: flex;
+    align-items: center;
+
+}
+
+.sub-visual__nav .list i {
+    margin: 0 6px;
+}
+
+/* 비주얼 제목 */
+.title h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.title .dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* 서브 내브 바: 비주얼 하단에 붙임 */
+.sub-nav--box {
+    position: absolute;
+    bottom: 0px;
+    /* 둥글게 표현된 박스 고려하여 살짝 내림 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: calc(100% - 60px);
+    max-width: 1200px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* 서브 내브 내부 정렬 */
+.sub-nav--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* 서브 내브 왼쪽 */
+.sub-nav--left {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #111;
+}
+
+.sub-nav--left .dot {
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+/* 서브 내브 오른쪽 탭 메뉴 */
+.sub-nav--right a {
+    margin-left: 30px;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.2s;
+}
+
+/* 활성화된 메뉴 (현재 페이지) */
+.sub-nav--right a.active {
+    color: #d60000;
+    font-weight: 600;
+}
+
+/* 활성화 밑줄 */
+.sub-nav--right a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d60000;
+}
+
+/* ⭐ 호버 시 스타일 추가 */
+.sub-nav--right a:hover {
+    color: #d60000;
+    font-weight: 600;
+}
+
+/* ⭐ 호버 시 밑줄 */
+.sub-nav--right a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d60000;
+}
+
+/* 소개 섹션 전체 */
+.introduce-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+/* 섹션 상단 문구 */
+.section-title {
+    background-color: #f9f9f9; /* 연한 회색 배경 */
+    padding: 85px 20px;         /* ✨ 여백 확대 */
+    margin-bottom: 40px;        /* 아래 여백 */
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #da291c;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+/* 2열 그리드 구성 */
+.introduce-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  align-items: stretch;       /* ✨ 요소 높이 맞춤 */
+}
+.text-block,
+.image-block {
+  height: 100%;               /* ✨ 양쪽 블록 높이 동일하게 */
+}
+
+.image-block {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 텍스트 블록만 */
+.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    background-color: #f1f1f1;  /* 배경색 유지 */
+    height: 100%;
+  }
+
+.text-block h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+/* 이미지 블록 */
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+/* 탭 메뉴 */
+.tab.common-tab {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tab-header {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tab-item .link {
+    background-color: #d60000;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tab-item .link:not(.on) {
+    background-color: #e5e5e5;
+    color: #111;
+}
+/*글씨 페드업*/
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 5s ease, transform 3s ease;
+  }
+  
+  .fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .text-block,
+.image-block {
+  min-height: 400px; /* 또는 원하시는 고정값 */
+}
+/*사진 페드인*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+  .fade-in.show {
+    opacity: 5;
+  }
+  /*하단 이미지*/
+  .diagram-outer {
+    width: 100%;
+    text-align: center; /* 또는 flex로도 가능 */
+    padding: 100px 0;
+  }
+  
+  .diagram-inner {
+    width: 600px;  /* 전체 묶음 크기만 조절 */
+    margin: 0 auto;
+    position: relative;
+    height: 600px;
+  }
+  
+  .center-img {
+    width: 600px;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .circle-img {
+    position: absolute;
+    width: 1000px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* 위치만 rotate로 겹겹이 돌리면 끝 */
+  .item-1 { transform: rotate(270deg) translateY(-220px) rotate(-270deg); }
+.item-2 { transform: rotate(342deg) translateY(-220px) rotate(-342deg); }
+.item-3 { transform: rotate(54deg) translateY(-220px) rotate(-54deg); }
+.item-4 { transform: rotate(126deg) translateY(-220px) rotate(-126deg); }
+.item-5 { transform: rotate(198deg) translateY(-220px) rotate(-198deg); }
+
+.fade {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .fade.show {
+    opacity: 1;
+  }
+  
+  /* 순차적으로 등장 (시계 방향) */
+  .delay-1 { transition-delay: 0.2s; }
+  .delay-2 { transition-delay: 0.6s; }
+  .delay-3 { transition-delay: 1.0s; }
+  .delay-4 { transition-delay: 1.4s; }
+  .delay-5 { transition-delay: 1.8s; }
+
+  .diagram-inner::before {
+    content: "";
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    width: 350px; /* 원 사이즈 조정 */
+    height: 350px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
